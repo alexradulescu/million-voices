@@ -22,20 +22,20 @@ export const FeatureFlagsSchema = z.object({
 export type IFeatureFlags = z.infer<typeof FeatureFlagsSchema>;
 
 export const DEFAULT_FEATURE_FLAGS: IFeatureFlags = {
-  webrtc_sync: true,
+  webrtc_sync: false,
 
   language_model_settings: true,
 
-  openai_api_key: true,
-  openai_proxy_url: true,
+  openai_api_key: false,
+  openai_proxy_url: false,
 
   create_session: true,
   edit_agent: true,
 
   dalle: true,
 
-  check_updates: true,
-  welcome_suggest: true,
+  check_updates: false,
+  welcome_suggest: false,
 };
 
 export const mapFeatureFlagsEnvToState = (config: IFeatureFlags) => {

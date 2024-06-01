@@ -5,10 +5,10 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { FORM_STYLE } from '@/const/layoutTokens';
+
 import { useChatStore } from '@/store/chat';
 import { useUserStore } from '@/store/user';
 import { userProfileSelectors } from '@/store/user/selectors';
-
 import Preview from './Preview';
 import { FieldType, ImageType } from './type';
 import { useScreenshot } from './useScreenshot';

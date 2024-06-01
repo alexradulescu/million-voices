@@ -1,10 +1,10 @@
 'use client';
 
-import { ActionIcon, Logo } from '@lobehub/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { MessageSquarePlus } from 'lucide-react';
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { DESKTOP_HEADER_ICON_SIZE } from '@/const/layoutTokens';
@@ -27,7 +27,7 @@ export const useStyles = createStyles(({ css, token }) => ({
 
 const Header = memo(() => {
   const { styles } = useStyles();
-  const { t } = useTranslation('chat');
+  // const { t } = useTranslation('chat');
   const [createSession] = useSessionStore((s) => [s.createSession]);
   const { enableWebrtc, showCreateSession } = useServerConfigStore(featureFlagsSelectors);
 
@@ -37,7 +37,8 @@ const Header = memo(() => {
     <Flexbox className={styles.top} gap={16} padding={16}>
       <Flexbox distribution={'space-between'} horizontal>
         <Flexbox align={'center'} gap={4} horizontal>
-          <Logo className={styles.logo} size={36} type={'text'} />
+          {/* <Logo className={styles.logo} size={36} type={'text'} /> */}
+          <span style={{ fontSize: '18px', fontWeight: '500' }}>Bullish ChatGPT</span>
           {enableWebrtc && <SyncStatusTag />}
         </Flexbox>
         {showCreateSession && (
@@ -47,7 +48,7 @@ const Header = memo(() => {
             onClick={() => mutate()}
             size={DESKTOP_HEADER_ICON_SIZE}
             style={{ flex: 'none' }}
-            title={t('newAgent')}
+            title={'New Chat'}
           />
         )}
       </Flexbox>
