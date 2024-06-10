@@ -1,3 +1,13 @@
+# BullsAI ChatGPT UI & Million-voices
+- BullsAI ChatGPT UI is based of LobeChat open source UI.
+- In order to keep things secure, we are doing a 2-step manual fork of the main repo:
+- Million-voices is a direct fork from LobeHub which can sync with the main repo. Main changes we make (logo, disabling some functionality) is in million-voices repo so we can easily fix conflicts and upgrades when needed
+- The we manually copy million-voices into BullsAI repo in order to have it private. Forks cannot be private in github and are always linked, so we manually fork, copy and replace the files.
+
+Below is the original LobeChat README file.
+
+
+
 <div align="center"><a name="readme-top"></a>
 
 [![][image-banner]][vercel-link]
